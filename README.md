@@ -1,6 +1,4 @@
-mvm-getting-started-python
-==========================
+managed-vms
+===========
 
-Getting started with Python Managed VMs runtime
-
-See https://github.com/GoogleCloudPlatform/mvm-getting-started-python/pull/1
+See https://github.com/GoogleCloudPlatform/managed-vms/pull/1
