@@ -1,4 +1,4 @@
 managed-vms
 ===========
 
-See https://github.com/GoogleCloudPlatform/managed-vms/pull/1
+See https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/pull/1
