@@ -2,4 +2,6 @@
 # single application.
 FROM google/appengine-python27
 
+RUN apt-get update && apt-get install -y fortunes
+
 ADD . /home/vmagent/app/

@@ -1,8 +1,11 @@
 import webapp2
+import subprocess
+
+MESSAGES = '/tmp/messages.txt'
 
 class HelloHandler(webapp2.RequestHandler):
   def get(self):
-    msg = 'hello %s\n' % self.request.headers.get('X-AppEngine-Country', 'world')
+    msg = subprocess.check_output('/usr/games/fortune')
     with open(MESSAGES, 'a') as f: f.write(msg)
     self.response.headers['Content-Type'] = 'text/plain'
     self.response.out.write(msg)
