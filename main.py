@@ -1,7 +1,13 @@
 from flask import Flask, helpers
 import subprocess
+import tempfile
 
-app = Flask(__name__)
+from synth import Synth
+
+app= Flask(__name__)
+app.debug = True
+
+synth = Synth()
 
 MESSAGES = '/tmp/messages.txt'
 
@@ -9,7 +15,9 @@ MESSAGES = '/tmp/messages.txt'
 def fortune():
   msg = subprocess.check_output('/usr/games/fortune')
   with open(MESSAGES, 'a') as f: f.write(msg)
-  return msg
+  with tempfile.NamedTemporaryFile() as f:
+    synth.say(msg, out=f)
+    return helpers.send_file(f.name, mimetype="audio/wav", as_attachment=False)
 
 @app.route("/messages")
 def messages():
