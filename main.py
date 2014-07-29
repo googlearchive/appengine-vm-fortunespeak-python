@@ -1,24 +1,58 @@
-from flask import Flask, helpers
+from flask import Flask, request, helpers, Response, send_file, redirect, url_for
+from jinja2 import Template
+
 import subprocess
 import tempfile
+import os.path
+import md5
 
 from synth import Synth
 
-app= Flask(__name__)
-app.debug = True
-
+app = Flask(__name__)
 synth = Synth()
 
 MESSAGES = '/tmp/messages.txt'
+TEMPLATE = Template("""
+<html>
+<body>
+<p>{{fortune}}</p>
+<audio src="/sounds/{{wav}}" autoplay></audio>
+<a href="/"><button>I'm Feeling Lucky</button></a>
+</body>
+</html>
+""")
 
-@app.route("/")
-def fortune():
-  msg = subprocess.check_output('/usr/games/fortune')
-  with open(MESSAGES, 'a') as f: f.write(msg)
-  with tempfile.NamedTemporaryFile() as f:
-    synth.say(msg, out=f)
-    return helpers.send_file(f.name, mimetype="audio/wav", as_attachment=False)
+CACHE = '/tmp/fortunes'
 
-@app.route("/messages")
-def messages():
-  return helpers.send_file(MESSAGES)
+@app.route('/')
+def synth_fortune():
+    msg = subprocess.check_output('/usr/games/fortune')
+    digest = md5.new(msg).hexdigest()
+    path = os.path.join(CACHE, digest)
+    if os.path.exists(path):
+        return redirect(url_for(serve_fortune, path=digest))
+    os.makedirs(path)
+    with open(os.path.join(CACHE, digest, 'message.txt'), 'w') as f:
+        f.write(msg)
+    with open(os.path.join(CACHE, digest, 'sound.wav'), 'w') as f:
+        synth.say(msg, out=f)
+    return redirect(url_for('serve_fortune', path=digest))
+
+@app.route('/<path:path>')
+def serve_fortune(path):
+    if not os.path.exists(os.path.join(CACHE, path)):
+        # cache miss regenerate a new fortune
+        return redirect(url_for('synth_fortune'))
+    with open(os.path.join(CACHE, path, 'message.txt')) as f:
+        msg = f.read()
+    return TEMPLATE.render(fortune=msg, wav=path)
+
+@app.route('/sounds/<path:path>')
+def serve_sound(path):
+    return send_file(os.path.join(CACHE, path, 'sound.wav'))
+
+@app.route('/_ah/start')
+@app.route('/_ah/stop')
+@app.route('/_ah/health')
+def health():
+    return 'ok'
