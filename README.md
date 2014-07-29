@@ -5,7 +5,7 @@ Fortune Speak is a Python sample app for Managed VMs that synthesize and display
 
 It extends a traditional Python App Engine application with new
 functionalities that are unlocked by Managed VMs
-- *Get more CPU and RAM* by running your module on Google Compute Engine VMs
+- *Get more CPU and RAM* by running your App Engine module on Google Compute Engine VMs
     - set GCE machine type in `app.yaml` ([view sources](app.yaml.py#L10))
 - *Escape the sandbox* by writing to files and launching subprocess
     - cache wave file to local disk ([view sources](main.py#L41))
@@ -15,6 +15,8 @@ functionalities that are unlocked by Managed VMs
     - install `pyttsx` and `flask` from [`requirements.txt`](requirements.txt) with `pip` ([view sources](Dockerfile#L5))
 - *Call into native* Python C extensions
     - import and call `_speak` `pyttsx` driver ([view sources](synth.py#L1))
+
+Below is a tutorial that will guide you on how to build, run and deploy this application step by step.
 
 ## Prerequisites
 
