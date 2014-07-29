@@ -77,9 +77,9 @@ During this step you will
 During this step you will:
 - create a simple Python hello world application
 
-0. First reset your working directory to `step0`
+0. First switch to `step0` branch
 
-        git reset --hard step0
+        git checkout step0
 
 1. Create a `app.yaml` file w/ the default App Engine configuration
 2. Create a `main.py` file using `webapp2` w/ a `RequestHandler` that print `hello: <Country the HTTP request is coming from>`
@@ -87,14 +87,15 @@ During this step you will:
 
 ### Solution
 
-- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/commit/step1)
+- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/compare/proppy:step0...step1)
 - Compare with your working directory
 
         git diff step1
 
-- If stuck, reset your working directory
+- If stuck, stash your working directory and switch to the solution branch
 
-        git reset --hard step1
+        git stash
+        git checkout step1
 
 ## Hello Managed VMs
 
@@ -110,14 +111,15 @@ During this step you will:
 
 ### Solution
 
-- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/commit/step2)
+- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/compare/proppy:step1...step2)
 - Compare with your working directory
 
         git diff step2
 
-- If stuck, reset your working directory
+- If stuck, stash your working directory and  switch to the solution branch
 
-        git reset --hard step2
+        git stash
+        git checkout step2
 
 ## Escape the sandbox
 
@@ -130,14 +132,15 @@ During this step you will:
 
 ### Solution
 
-- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/commit/step3)
+- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/compare/proppy:step2...step3)
 - Compare with your working directory
 
         git diff step3
 
-- If stuck, reset your working directory
+- If stuck, stash your working directory and switch to the solution branch
 
-        git reset --hard step3
+        git stash
+        git checkout step3
 
 ## Customize the Runtime Environment
 
@@ -151,14 +154,15 @@ During this step you will:
 
 ### Solution
 
-- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/commit/step4)
+- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/compare/proppy:step3...step4)
 - Compare with your working directory
 
         git diff step4
 
-- If stuck, reset your working directory
+- If stuck, stash your working directory and switch to the solution branch
 
-        git reset --hard step4
+        git stash
+        git checkout step4
 
 ## Manage Python dependencies
 
@@ -173,15 +177,15 @@ During this step you will:
 
 ### Solution
 
-- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/commit/step5)
+- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/compare/proppy:step4...step5)
 - Compare with your working directory
 
         git diff step5
 
-- If stuck, reset your working directory
+- If stuck, stash your working directory and switch to the solution branch
 
-        git reset --hard step5
-
+        git stash
+        git checkout step5
 
 ## Use Python C extensions
 
@@ -199,11 +203,12 @@ During this step you will:
 
 ### Solution
 
-- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/commit/step6)
+- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/compare/proppy:step6...step6)
 - Compare with your working directory
 
         git diff step6
 
-- If stuck, reset your working directory
+- If stuck, stash your working directory and switch to the solution branch
 
-        git reset --hard step6
+        git stash
+        git checkout step6
