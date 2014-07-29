@@ -22,6 +22,11 @@ TEMPLATE = Template("""
 </html>
 """)
 
+# Local directory for caching fortunes and generated sounds,
+# each cached fortune is stored under:
+# /tmp/fortunes/<md5(text)>
+# /tmp/fortunes/<md5(text)>/message.txt
+# /tmp/fortunes/<md5(text)>/sound.wav
 CACHE = '/tmp/fortunes'
 
 @app.route('/')
