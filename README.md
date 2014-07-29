@@ -205,7 +205,7 @@ During this step you will:
 
 ### Solution
 
-- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/compare/proppy:step6...step6)
+- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/compare/proppy:step5...step6)
 - Compare with your working directory
 
         git diff step6
