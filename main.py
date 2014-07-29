@@ -16,8 +16,10 @@ TEMPLATE = Template("""
 <html>
 <body>
 <p>{{fortune}}</p>
-<audio src="/sounds/{{wav}}" autoplay></audio>
+<audio src="/sounds/{{wav}}" autoplay controls></audio>
+<div>
 <a href="/"><button>I'm Feeling Lucky</button></a>
+</div>
 </body>
 </html>
 """)
