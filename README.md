@@ -58,6 +58,7 @@ During this step you will
 
         git clone https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python
         cd appengine-vm-fortunespeak-python
+        git fetch --all
 
 2. Run the application locally
 
