@@ -57,9 +57,3 @@ def serve_fortune(path):
 @app.route('/sounds/<path:path>')
 def serve_sound(path):
     return send_file(os.path.join(CACHE, path, 'sound.wav'))
-
-@app.route('/_ah/start')
-@app.route('/_ah/stop')
-@app.route('/_ah/health')
-def health():
-    return 'ok'
