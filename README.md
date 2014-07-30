@@ -6,15 +6,15 @@ Fortune Speak is a Python sample app for Managed VMs that synthesize and display
 It extends a traditional Python App Engine application with new
 functionalities that are unlocked by Managed VMs
 - *Get more CPU and RAM* by running your App Engine module on Google Compute Engine VMs
-    - set GCE machine type in `app.yaml` ([view sources](app.yaml.py#L10))
+    - set GCE machine type in `app.yaml` ([view sources](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/blob/0c65d79e278dd31df837f70d85c563e4dc15e52b/app.yaml#L10))
 - *Escape the sandbox* by writing to files and launching subprocess
-    - cache wave file to local disk ([view sources](main.py#L41))
-    - launch the `fortune` executable ([view sources](main.py#L33))
+    - cache wave file to local disk ([view sources](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/blob/0c65d79e278dd31df837f70d85c563e4dc15e52b/main.py#L43))
+    - launch the `fortune` executable ([view sources](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/blob/0c65d79e278dd31df837f70d85c563e4dc15e52b/main.py#L36))
 - *Customize your runtime* by installing third party packages
-    - install the `fortune` package with `apt-get` ([view sources](Dockerfile#L3))
-    - install `pyttsx` and `flask` from [`requirements.txt`](requirements.txt) with `pip` ([view sources](Dockerfile#L5))
+    - install the `fortune` package with `apt-get` ([view sources](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/blob/0c65d79e278dd31df837f70d85c563e4dc15e52b/Dockerfile#L5))
+    - install `pyttsx` and `flask` from [`requirements.txt`](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/blob/0c65d79e278dd31df837f70d85c563e4dc15e52b/requirements.txt) with `pip` ([view sources](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/blob/0c65d79e278dd31df837f70d85c563e4dc15e52b/Dockerfile#L7))
 - *Call into native* Python C extensions
-    - import and call `_speak` `pyttsx` driver ([view sources](synth.py#L1))
+    - import and call `_speak` `pyttsx` driver ([view sources](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/blob/0c65d79e278dd31df837f70d85c563e4dc15e52b/synth.py#L11))
 
 Below is a tutorial that will guide you on how to build, run and deploy this application step by step.
 
@@ -56,7 +56,7 @@ During this step you will
 
 1. Get the application code
 
-        git clone https://github.com/proppy/appengine-vm-fortunespeak-python
+        git clone https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python
         cd appengine-vm-fortunespeak-python
 
 2. Run the application locally
@@ -70,7 +70,7 @@ During this step you will
       
 1. Build and deploy the application image
 
-        gcloud preview app deploy .
+        gcloud preview app deploy . --server preview.appengine.google.com
 
 2. After the command complete succesfully open `https://<project>.appspot.com`
 
@@ -89,7 +89,7 @@ During this step you will:
 
 ### Solution
 
-- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/compare/proppy:step0...step1)
+- Review the [solution](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/compare/proppy:step0...step1)
 - Compare with your working directory
 
         git diff step1
@@ -113,7 +113,7 @@ During this step you will:
 
 ### Solution
 
-- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/compare/proppy:step1...step2)
+- Review the [solution](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/compare/proppy:step1...step2)
 - Compare with your working directory
 
         git diff step2
@@ -134,7 +134,7 @@ During this step you will:
 
 ### Solution
 
-- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/compare/proppy:step2...step3)
+- Review the [solution](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/compare/proppy:step2...step3)
 - Compare with your working directory
 
         git diff step3
@@ -156,7 +156,7 @@ During this step you will:
 
 ### Solution
 
-- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/compare/proppy:step3...step4)
+- Review the [solution](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/compare/proppy:step3...step4)
 - Compare with your working directory
 
         git diff step4
@@ -179,7 +179,7 @@ During this step you will:
 
 ### Solution
 
-- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/compare/proppy:step4...step5)
+- Review the [solution](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/compare/proppy:step4...step5)
 - Compare with your working directory
 
         git diff step5
@@ -205,7 +205,7 @@ During this step you will:
 
 ### Solution
 
-- Review the [solution](https://github.com/proppy/appengine-vm-fortunespeak-python/compare/proppy:step5...step6)
+- Review the [solution](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/compare/proppy:step5...step6)
 - Compare with your working directory
 
         git diff step6
