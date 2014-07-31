@@ -3,6 +3,8 @@ Fortune Speak
 
 Fortune Speak is a Python sample app for Managed VMs that synthesize and display a random fortune sound everytime you load the page.
 
+[Demo](http://fortunespeak.appspot.com/)
+
 It extends a traditional Python App Engine application with new
 functionalities that are unlocked by Managed VMs
 - *Get more CPU and RAM* by running your App Engine module on Google Compute Engine VMs
