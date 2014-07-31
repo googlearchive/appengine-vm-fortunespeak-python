@@ -93,7 +93,7 @@ During this step you will:
 - Review the [solution](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/compare/proppy:step0...step1)
 - Compare with your working directory
 
-        git diff step1
+        git diff step1 -R
 
 - If stuck, stash your working directory and switch to the solution branch
 
@@ -117,7 +117,7 @@ During this step you will:
 - Review the [solution](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/compare/proppy:step1...step2)
 - Compare with your working directory
 
-        git diff step2
+        git diff step2 -R
 
 - If stuck, stash your working directory and  switch to the solution branch
 
@@ -138,7 +138,7 @@ During this step you will:
 - Review the [solution](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/compare/proppy:step2...step3)
 - Compare with your working directory
 
-        git diff step3
+        git diff step3 -R
 
 - If stuck, stash your working directory and switch to the solution branch
 
@@ -160,7 +160,7 @@ During this step you will:
 - Review the [solution](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/compare/proppy:step3...step4)
 - Compare with your working directory
 
-        git diff step4
+        git diff step4 -R
 
 - If stuck, stash your working directory and switch to the solution branch
 
@@ -183,7 +183,7 @@ During this step you will:
 - Review the [solution](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/compare/proppy:step4...step5)
 - Compare with your working directory
 
-        git diff step5
+        git diff step5 -R
 
 - If stuck, stash your working directory and switch to the solution branch
 
@@ -209,7 +209,7 @@ During this step you will:
 - Review the [solution](https://github.com/GoogleCloudPlatform/appengine-vm-fortunespeak-python/compare/proppy:step5...step6)
 - Compare with your working directory
 
-        git diff step6
+        git diff step6 -R
 
 - If stuck, stash your working directory and switch to the solution branch
 
