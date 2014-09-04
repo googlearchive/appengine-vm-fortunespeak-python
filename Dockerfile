@@ -2,4 +2,4 @@
 # single application.
 FROM google/appengine-python27
 
-ADD . /home/vmagent/app/
+ADD . /app/
