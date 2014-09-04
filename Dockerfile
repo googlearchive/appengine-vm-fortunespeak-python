@@ -6,4 +6,4 @@ RUN apt-get update && apt-get install -y fortunes libespeak-dev
 ADD requirements.txt /app/
 RUN pip install -r requirements.txt
 
-ADD . /app
+ADD . /app/
