@@ -3,7 +3,7 @@
 FROM google/appengine-python27
 
 RUN apt-get update && apt-get install -y fortunes
-ADD requirements.txt /home/vmagent/app/
+ADD requirements.txt /app/
 RUN pip install -r requirements.txt
 
-ADD . /home/vmagent/app/
+ADD . /app/
