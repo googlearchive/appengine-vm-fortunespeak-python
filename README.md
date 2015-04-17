@@ -52,7 +52,7 @@ During this step you will
         gcloud components update appengine-managed-vms
         gcloud auth login
         gcloud set project <project>
-        gcloud preview app setup-managed-vms
+        docker pull gcr.io/google_appengine/go-compat
 
 ### Run the application locally
 
