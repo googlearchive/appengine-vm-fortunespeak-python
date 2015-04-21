@@ -52,7 +52,7 @@ During this step you will
         gcloud components update appengine-managed-vms
         gcloud auth login
         gcloud set project <project>
-        docker pull gcr.io/google_appengine/go-compat
+        docker pull gcr.io/google_appengine/python-compat
 
 ### Run the application locally
 
