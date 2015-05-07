@@ -64,7 +64,7 @@ During this step you will
 
 2. Run the application locally
 
-        gcloud preview app run .
+        gcloud preview app run app.yaml
 
 3. After seeing a request to `/_ah/start` in the logs open [http://localhost:8080](http://localhost:8080)
 
@@ -73,7 +73,7 @@ During this step you will
       
 1. Build and deploy the application image
 
-        gcloud preview app deploy . --server preview.appengine.google.com
+        gcloud preview app deploy app.yaml --server preview.appengine.google.com
 
 2. After the command complete succesfully open `https://<project>.appspot.com`
 
