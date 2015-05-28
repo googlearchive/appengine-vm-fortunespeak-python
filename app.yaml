@@ -1,13 +1,10 @@
 module: default
-version: 1
 runtime: python27
 vm: true
 api_version: 1
 threadsafe: yes
 manual_scaling:
   instances: 1
-vm_settings:
-  machine_type: n1-standard-2
 
 handlers:
 - url: .*
