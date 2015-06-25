@@ -1,2 +1,10 @@
-Flask==0.10.1
-pyttsx==1.1
+# This requirements file lists all third-party dependencies for this project.
+#
+# Run 'pip install -r requirements.txt -t lib/' to install these dependencies
+# in `lib/` subdirectory.
+#
+# Note: The `lib` directory is added to `sys.path` by `appengine_config.py`.
+Flask==0.10
+-e git+https://github.com/GoogleCloudPlatform/gcloud-python.git@3e86aaed3c7e192a17d9b790f90a41cc2b7baa6a#egg=gcloud
+requests
+oauth2client
