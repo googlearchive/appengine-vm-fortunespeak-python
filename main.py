@@ -37,7 +37,7 @@ def synth_fortune():
     digest = md5.new(msg).hexdigest()
     path = os.path.join(CACHE, digest)
     if os.path.exists(path):
-        return redirect(url_for(serve_fortune, path=digest))
+        return redirect(url_for('serve_fortune', path=digest))
     os.makedirs(path)
     with open(os.path.join(CACHE, digest, 'message.txt'), 'w') as f:
         f.write(msg)
