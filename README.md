@@ -49,6 +49,7 @@ During this step you will
 
 1. Get and install the SDK preview release
 2. Setup the Managed VMs components:
+
         gcloud components update appengine-managed-vms
         gcloud auth login
         gcloud set project <project>
